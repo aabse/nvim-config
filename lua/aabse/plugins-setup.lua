@@ -36,6 +36,8 @@ return packer.startup(function(use)
 	use("bluz71/vim-nightfly-guicolors")
 	use("maxmellon/vim-jsx-pretty")
 
+  use("morhetz/gruvbox")
+
 	-- tmux & split window navigation
 	use("christoomey/vim-tmux-navigator")
 
@@ -104,6 +106,15 @@ return packer.startup(function(use)
 
 	-- git signs plugin
 	use("lewis6991/gitsigns.nvim")
+
+  -- markdown preview
+  use({ 'toppair/peek.nvim', run = 'deno task --quiet build:fast' })
+
+  -- emmet
+  use("mattn/emmet-vim")
+
+  -- multi cursor
+  use("mg979/vim-visual-multi")
 
 	if packer_bootstrap then
 		require("packer").sync()

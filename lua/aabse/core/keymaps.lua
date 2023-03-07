@@ -10,8 +10,8 @@ keymap.set("n", "<leader>nh", ":nohl<CR>") -- clear search highlight
 
 keymap.set("n", "x", '"_x"') -- delete character without copying it
 
-keymap.set("n", "<leader>+", "<C-a>") -- increment number
-keymap.set("n", "<leader>-", "<C-x>") -- decrement number
+--keymap.set("n", "<leader>+", "<C-a>") -- increment number
+--keymap.set("n", "<leader>-", "<C-x>") -- decrement number
 
 keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
 keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
@@ -38,3 +38,8 @@ keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string u
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
 
+-- emmet
+vim.g.user_emmet_leader_key = '<c-y>'
+
+-- vim-visual-multi
+keymap.set("n", "<C-d>", ":call vm#commands#find_all(0, 0)<cr>") -- select all occurences in file

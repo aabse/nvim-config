@@ -1,4 +1,5 @@
-local opt = vim.opt
+local g = vim.g -- Global variables
+local opt = vim.opt -- Set options
 
 -- line numbers
 opt.relativenumber = false
@@ -37,3 +38,5 @@ opt.splitbelow = true
 
 opt.iskeyword:append("-")
 
+-- enable mouse for multi selection
+g.VM_mouse_mappings = 1
